@@ -1,0 +1,21 @@
+<h1 class="text-primary">Posts </h1>
+
+<div *ngFor="let p of  posts.result" >
+
+  <div class="panel">
+
+    <div class="panel-header">
+      {{p.title}}
+    </div>
+
+    <div class="panel-body">
+      {{p.description}}
+    </div>
+    <a href="/edit-post/{{p.id}}" class="btn btn-success">Edit Post</a>
+
+    <button (click)="deletePost(p.id)" class="btn btn-primary" >Delete</button>
+  </div>
+
+
+</div>
+

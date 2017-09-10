@@ -1,0 +1,27 @@
+<h1>Add Post</h1>
+
+
+
+<form (submit)="addPost(title,description)" class="well ">
+
+  <div class="form-group">
+    <label>Title:</label>
+    <input type="text" class="form-control" placeholder="add title" [(ngModel)]="title" name="title" >
+  </div>
+
+
+
+  <div class="form-group">
+    <label>Description:</label>
+    <input type="text" class="form-control" placeholder="add description" [(ngModel)]="description" name="description" >
+  </div>
+
+
+  <div *ngFor="let error of errors" class="alert alert-danger">
+    <div>There is an error in :{{error.field}} field</div>
+    <div>{{error.message}}</div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" >Save</button>
+
+</form>

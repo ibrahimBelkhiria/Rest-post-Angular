@@ -1,0 +1,21 @@
+<h1 class="text-center text-success">
+  Please  Sign in
+</h1>
+
+<form (submit)="login($event)">
+
+  <div class="form-group">
+    <label >Username:</label>
+    <input type="text" class="form-control" name="username" required="required"  [(ngModel)]="username"  >
+  </div>
+
+  <div class="form-group">
+    <label >Password:</label>
+    <input type="password" class="form-control" name="password" required="required"   [(ngModel)]="password"   >
+  </div>
+  <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+
+  <button type="submit" class="btn btn-primary" >Login</button>
+
+
+</form>
